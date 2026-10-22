@@ -1,6 +1,6 @@
 # Tareeq design system
 
-Tareeq (طريق, "road" or "way") is a hands-free Arabic learning app. Full visual reference: open `styleguide.html`.
+Tareeq (طريق, "road" or "way") is a hands-free Arabic learning app.
 
 ## Files
 - `css/tokens.css`: colour, type, spacing, radius, motion tokens (light + dark). Edit here first.
