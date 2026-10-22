@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tareeq Style Guide</title>
+  <meta name="description" content="Design system and brand style guide for Tareeq, the hands-free Arabic learning app.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <style>
+    section { padding-block: var(--space-6); }
+    .swatches { display:grid; gap: var(--space-4); grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
+    .sw { border-radius: var(--radius-md); overflow:hidden; border:1px solid var(--border); background: var(--bg-raised); font-size: var(--text-xs); }
+    .sw i { display:block; height: 72px; }
+    .sw b, .sw span { display:block; padding: 0 var(--space-3); }
+    .sw b { padding-top: var(--space-2); font-size: var(--text-sm); } .sw span { padding-bottom: var(--space-2); color: var(--text-muted); font-family: ui-monospace, monospace; }
+    .row { display:flex; flex-wrap:wrap; gap: var(--space-4); align-items:center; }
+    .spec { display:grid; grid-template-columns: 9rem 1fr; gap: var(--space-4); align-items: baseline; padding-block: var(--space-3); border-bottom: 1px solid var(--border); }
+    .spec code, code { font-family: ui-monospace, monospace; font-size: var(--text-xs); color: var(--text-muted); }
+    .space { display:inline-block; background: var(--accent); height: 16px; border-radius: 3px; }
+    .grid2 { display:grid; gap: var(--space-5); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+    .do { border-left: 6px solid var(--brand); } .dont { border-left: 6px solid var(--danger); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="/"><img src="/assets/brand/tareeq-mark.svg" alt="" width="40" height="40">Tareeq</a>
+    <span class="chip">Style guide v1.0</span>
+  </header>
+
+  <main>
+    <h1>Style guide</h1>
+    <p style="font-size:var(--text-lg)">Tareeq (<span lang="ar" dir="rtl" class="ar">طريق</span>) means “road” or “way”. The look is a night drive through olive country: asphalt, a dashed gold centre line, and warm paper. Tokens live in <code>css/tokens.css</code>; components in <code>css/base.css</code>.</p>
+
+    <hr class="roadline">
+
+    <section id="logo">
+      <h2>Logo</h2>
+      <p>The mark is a winding road with a dashed centre line, on olive. It is the app icon and favicon. Pair it with the Fraunces wordmark; the Arabic <span lang="ar" class="ar">طريق</span> may be set in Cairo 800 alongside.</p>
+      <div class="row">
+        <div class="card" style="background:var(--cream-100)"><img src="/assets/brand/tareeq-mark.svg" width="120" height="120" alt="Tareeq mark"></div>
+        <div class="card" style="background:var(--cream-100)"><img src="/assets/brand/tareeq-logo.svg" width="320" alt="Tareeq logo"></div>
+        <div class="card" style="background:var(--asphalt-900)"><img src="/favicon-32.png" width="32" height="32" alt="Favicon size"> <img src="/icon-192.png" width="96" height="96" alt="App icon"></div>
+      </div>
+      <p style="margin-top:var(--space-4)">Clear space: one quarter of the mark's width on all sides. Minimum size: 24px. Don't recolour the road, rotate the mark, or place it on olive.</p>
+    </section>
+
+    <section id="colour">
+      <h2>Colour</h2>
+      <h3>Brand</h3>
+      <div class="swatches">
+        <div class="sw"><i style="background:#14181a"></i><b>Asphalt 900</b><span>#14181A</span></div>
+        <div class="sw"><i style="background:#4a5a2b"></i><b>Olive 700</b><span>#4A5A2B</span></div>
+        <div class="sw"><i style="background:#f2b632"></i><b>Saffron 500</b><span>#F2B632</span></div>
+        <div class="sw"><i style="background:#f6efe2"></i><b>Cream 100</b><span>#F6EFE2</span></div>
+        <div class="sw"><i style="background:#b84630"></i><b>Terracotta 600</b><span>#B84630</span></div>
+      </div>
+      <h3 style="margin-top:var(--space-6)">Supporting</h3>
+      <div class="swatches">
+        <div class="sw"><i style="background:#2a3033"></i><b>Asphalt 700</b><span>#2A3033</span></div>
+        <div class="sw"><i style="background:#5b6165"></i><b>Asphalt 500</b><span>#5B6165</span></div>
+        <div class="sw"><i style="background:#a9aeb0"></i><b>Asphalt 300</b><span>#A9AEB0</span></div>
+        <div class="sw"><i style="background:#6b7f3a"></i><b>Olive 500</b><span>#6B7F3A</span></div>
+        <div class="sw"><i style="background:#e4e8d3"></i><b>Olive 100</b><span>#E4E8D3</span></div>
+        <div class="sw"><i style="background:#fbe3a4"></i><b>Saffron 200</b><span>#FBE3A4</span></div>
+        <div class="sw"><i style="background:#f6dcd4"></i><b>Terracotta 100</b><span>#F6DCD4</span></div>
+        <div class="sw"><i style="background:#fbf7ee"></i><b>Cream 50</b><span>#FBF7EE</span></div>
+        <div class="sw"><i style="background:#ebdfc8"></i><b>Cream 200</b><span>#EBDFC8</span></div>
+        <div class="sw"><i style="background:#d9c9a8"></i><b>Cream 300</b><span>#D9C9A8</span></div>
+      </div>
+      <h3 style="margin-top:var(--space-6)">Contrast (WCAG AA verified)</h3>
+      <div class="spec"><span>Asphalt on Cream</span><span>15.6:1, body text</span></div>
+      <div class="spec"><span>Olive on Cream</span><span>6.6:1, links and primary buttons</span></div>
+      <div class="spec"><span>Saffron on Asphalt</span><span>9.8:1, accents on dark</span></div>
+      <div class="spec"><span>Asphalt 500 on Cream</span><span>5.5:1, muted text</span></div>
+      <div class="spec"><span>White on Terracotta</span><span>5.3:1, danger buttons</span></div>
+      <p style="margin-top:var(--space-4)"><strong>Saffron is never used as text on cream</strong> (it fails contrast). Use it for fills, the road line and dark backgrounds. Dark mode is the in-car theme: asphalt background, saffron brand colour.</p>
+    </section>
+
+    <section id="type">
+      <h2>Typography</h2>
+      <div class="spec"><code>Fraunces 600</code><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-xl)">Display and headings, Latin</span></div>
+      <div class="spec"><code>Instrument Sans 400–600</code><span>Body, UI and buttons. Clean, readable at a glance.</span></div>
+      <div class="spec"><code>Cairo 600–800</code><span class="ar" lang="ar" dir="rtl" style="font-size:var(--text-arabic-lg)">تعلّم العربية</span></div>
+      <h3 style="margin-top:var(--space-6)">Scale</h3>
+      <div class="spec"><code>--text-3xl</code><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-3xl);line-height:1.1">Learn Arabic</span></div>
+      <div class="spec"><code>--text-2xl</code><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-2xl)">Study the language</span></div>
+      <div class="spec"><code>--text-xl</code><span style="font-family:var(--font-display);font-weight:600;font-size:var(--text-xl)">Section heading</span></div>
+      <div class="spec"><code>--text-md (body)</code><span>Body copy at 17px with a 1.55 line height reads comfortably at a glance.</span></div>
+      <div class="spec"><code>--text-sm / --text-xs</code><span style="font-size:var(--text-sm)">Captions and labels.</span></div>
+      <p style="margin-top:var(--space-4)">Arabic is set larger than Latin text beside it (about 1.3×), with <code>line-height: 1.7</code>, and always carries <code>lang="ar" dir="rtl"</code>. Never letter-space Arabic or italicise it.</p>
+    </section>
+
+    <section id="space">
+      <h2>Spacing, shape and motion</h2>
+      <div class="spec"><code>4px base</code><span><span class="space" style="width:4px"></span> <span class="space" style="width:8px"></span> <span class="space" style="width:16px"></span> <span class="space" style="width:24px"></span> <span class="space" style="width:32px"></span> <span class="space" style="width:48px"></span> <span class="space" style="width:72px"></span></span></div>
+      <div class="spec"><code>Radius</code><span>8 / 14 / 24 px and pill. Roads curve; nothing is sharp.</span></div>
+      <div class="spec"><code>Tap target</code><span>56px minimum for primary actions.</span></div>
+      <div class="spec"><code>Motion</code><span>120–220ms, ease-out. Disabled under <code>prefers-reduced-motion</code>.</span></div>
+    </section>
+
+    <section id="components">
+      <h2>Components</h2>
+      <h3>Buttons</h3>
+      <div class="row"><button class="btn btn-primary">Start lesson</button><button class="btn btn-accent">Resume</button><button class="btn btn-ghost">Settings</button><button class="btn btn-danger">Reset progress</button></div>
+
+      <h3 style="margin-top:var(--space-6)">Phrase card</h3>
+      <p>The core learning unit. Arabic first, then transliteration, then English.</p>
+      <div class="phrase" lang="ar" style="max-width:34rem">
+        <div class="ar" dir="rtl">مرحبا</div>
+        <div class="translit" lang="en">marhaba</div>
+        <div class="en" lang="en">hello</div>
+      </div>
+
+      <h3 style="margin-top:var(--space-6)">Chips, progress, field</h3>
+      <div class="row"><span class="chip">Learned</span><span class="chip chip-accent">In progress</span><span class="chip chip-danger">Needs review</span></div>
+      <p style="margin-top:var(--space-4)"></p>
+      <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Lesson progress" style="--value:60%; max-width:28rem"><span></span></div>
+      <div class="field" style="max-width:24rem; margin-top:var(--space-5)"><label for="email">Email</label><input class="input" id="email" type="email" placeholder="you@example.com"></div>
+
+      <h3 style="margin-top:var(--space-6)">Road line divider</h3>
+      <hr class="roadline" style="margin-block:var(--space-4)">
+      <p>Use it once per page to separate the hero from the rest. It is the brand's signature, so don't overuse it.</p>
+    </section>
+
+    <section id="voice">
+      <h2>Voice and driving-safe rules</h2>
+      <div class="grid2">
+        <div class="card do"><h3>Do</h3><p>Speak plainly and warmly: “Say it back.” Use short sentences. Keep to one idea per screen. Lead with the Arabic.</p></div>
+        <div class="card dont"><h3>Don't</h3><p>Don't use jargon, hype or guilt (“You missed a day!”). Don't require reading, tapping or typing while the car is moving.</p></div>
+      </div>
+      <p style="margin-top:var(--space-5)">Audio is the primary interface. Visual UI is for when the user is parked: large targets, high contrast, one action per screen.</p>
+    </section>
+
+    <section id="seo">
+      <h2>Metadata and social</h2>
+      <p>Primary keywords: <em>learn Arabic</em>, <em>study Arabic language</em>, <em>Palestinian Arabic</em>. Titles stay under 60 characters, descriptions under 160. Social images are 1200×630 (Open Graph) and 1200×600 (X card); sources are in <code>social/</code>; regenerate the PNGs with <code>scripts/render-images.py</code>.</p>
+      <div class="grid2">
+        <img src="/og-image.png" alt="Open Graph image" style="border-radius:var(--radius-md);border:1px solid var(--border)">
+        <img src="/twitter-card.png" alt="Twitter card image" style="border-radius:var(--radius-md);border:1px solid var(--border)">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>Tareeq style guide · <a href="mailto:contact@tareeqapp.com">contact@tareeqapp.com</a></p>
+  </footer>
+</div>
+</body>
+</html>

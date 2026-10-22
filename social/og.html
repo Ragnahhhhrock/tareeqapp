@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../css/tokens.css">
+<style>
+  html,body{margin:0}
+  .card{width:1200px;height:var(--h,630px);position:relative;overflow:hidden;background:#14181a;color:#f6efe2;font-family:var(--font-body)}
+  .glow{position:absolute;right:-180px;top:-200px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,#4a5a2b 0%,rgba(74,90,43,0) 68%)}
+  .mark{position:absolute;left:72px;top:64px;width:84px;height:84px}
+  .brand{position:absolute;left:176px;top:78px;font:600 44px/1 var(--font-display);letter-spacing:-.01em}
+  .ar{position:absolute;right:76px;top:48px;font:800 210px/1.15 var(--font-arabic);color:#f2b632;direction:rtl}
+  .copy{position:absolute;left:72px;top:calc(var(--h,630px) - 330px);width:640px}
+  h1{margin:0 0 20px;font:600 64px/1.05 var(--font-display);letter-spacing:-.02em}
+  h1 em{font-style:italic;color:#f2b632}
+  p{margin:0;font:400 28px/1.4 var(--font-body);color:#d9d2c3}
+  .url{position:absolute;left:72px;bottom:38px;font:600 24px var(--font-body);letter-spacing:.04em;color:#f6efe2}
+  .road{position:absolute;left:0;right:0;bottom:0;height:12px;background:repeating-linear-gradient(90deg,#f2b632 0 54px,transparent 54px 100px)}
+  .tag{position:absolute;right:76px;bottom:38px;font:600 20px var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:#a9aeb0}
+</style></head><body>
+<div class="card">
+  <div class="glow"></div>
+  <img class="mark" src="../assets/brand/tareeq-mark.svg" alt="">
+  <div class="brand">Tareeq</div>
+  <div class="ar" lang="ar" dir="rtl">طريق</div>
+  <div class="copy">
+    <h1>Learn Arabic<br><em>while you drive.</em></h1>
+    <p>Hands-free audio lessons in Palestinian Arabic. Just listen and speak.</p>
+  </div>
+  <div class="url">tareeqapp.com</div>
+  <div class="tag">Study the Arabic language</div>
+  <div class="road"></div>
+</div>
+</body></html>

@@ -1,0 +1,15 @@
+{
+  "name": "Tareeq – Learn Arabic Hands-Free",
+  "short_name": "Tareeq",
+  "description": "Study the Arabic language while you drive. Hands-free Palestinian Arabic audio lessons.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#14181a",
+  "theme_color": "#4a5a2b",
+  "lang": "en",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

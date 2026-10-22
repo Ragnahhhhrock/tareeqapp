@@ -1,0 +1,108 @@
+/* Tareeq design tokens — طريق
+   Single source of truth. See DESIGN.md for usage rules. */
+
+@font-face { font-family: "Fraunces"; font-weight: 600; font-style: normal; font-display: swap; src: url("../assets/fonts/fraunces-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 700; font-style: normal; font-display: swap; src: url("../assets/fonts/fraunces-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 600; font-style: italic; font-display: swap; src: url("../assets/fonts/fraunces-latin-600-italic.woff2") format("woff2"); }
+@font-face { font-family: "Instrument Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Instrument Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Instrument Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("../assets/fonts/instrument-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cairo"; font-weight: 600; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; src: url("../assets/fonts/cairo-arabic-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cairo"; font-weight: 700; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; src: url("../assets/fonts/cairo-arabic-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cairo"; font-weight: 800; font-style: normal; font-display: swap; unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; src: url("../assets/fonts/cairo-arabic-800-normal.woff2") format("woff2"); }
+
+:root {
+  /* Colour — raw palette */
+  --asphalt-900: #14181a;   /* night road: dark surfaces, primary text */
+  --asphalt-700: #2a3033;
+  --asphalt-500: #5b6165;   /* secondary text on cream (5.5:1) */
+  --asphalt-300: #a9aeb0;
+  --olive-700: #4a5a2b;     /* brand primary (6.6:1 on cream) */
+  --olive-500: #6b7f3a;
+  --olive-100: #e4e8d3;
+  --saffron-500: #f2b632;   /* the road line: accents, focus, highlights (9.8:1 on asphalt) */
+  --saffron-200: #fbe3a4;
+  --terracotta-600: #b84630; /* alerts, "wrong answer" states (white text 5.3:1) */
+  --terracotta-100: #f6dcd4;
+  --cream-50: #fbf7ee;
+  --cream-100: #f6efe2;     /* page background */
+  --cream-200: #ebdfc8;
+  --cream-300: #d9c9a8;
+
+  /* Colour — semantic roles (light) */
+  --bg: var(--cream-100);
+  --bg-raised: var(--cream-50);
+  --bg-sunken: var(--cream-200);
+  --bg-inverse: var(--asphalt-900);
+  --text: var(--asphalt-900);
+  --text-muted: var(--asphalt-500);
+  --text-inverse: var(--cream-100);
+  --brand: var(--olive-700);
+  --brand-hover: #3b4922;
+  --on-brand: var(--cream-50);
+  --accent: var(--saffron-500);
+  --on-accent: var(--asphalt-900);
+  --danger: var(--terracotta-600);
+  --on-danger: #ffffff;
+  --success: var(--olive-700);
+  --border: var(--cream-300);
+  --focus-ring: 0 0 0 3px var(--cream-100), 0 0 0 6px var(--asphalt-900);
+
+  /* Typography */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-arabic: "Cairo", "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, sans-serif;
+
+  --text-xs: 0.8125rem;   /* 13 */
+  --text-sm: 0.9375rem;   /* 15 */
+  --text-md: 1.0625rem;   /* 17 body */
+  --text-lg: 1.3125rem;   /* 21 */
+  --text-xl: 1.75rem;     /* 28 */
+  --text-2xl: 2.5rem;     /* 40 */
+  --text-3xl: clamp(2.5rem, 6vw, 4.25rem);
+  --text-arabic-lg: 2.25rem;
+  --text-arabic-xl: clamp(3rem, 8vw, 5.5rem);
+  --leading-tight: 1.1;
+  --leading-body: 1.55;
+  --leading-arabic: 1.7;  /* Arabic needs more vertical room */
+
+  /* Spacing — 4px base */
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.5rem; --space-6: 2rem; --space-7: 3rem; --space-8: 4.5rem; --space-9: 7rem;
+
+  /* Shape */
+  --radius-sm: 8px; --radius-md: 14px; --radius-lg: 24px; --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(20 24 26 / 0.08);
+  --shadow-md: 0 8px 24px rgb(20 24 26 / 0.10);
+
+  /* Layout & motion */
+  --content-width: 68rem;
+  --reading-width: 40rem;
+  --tap-min: 56px;        /* oversized targets: used while stopped, never while driving */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 120ms; --dur: 220ms;
+}
+
+/* Dark mode: the in-car / night-driving theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--asphalt-900);
+    --bg-raised: var(--asphalt-700);
+    --bg-sunken: #0d1011;
+    --bg-inverse: var(--cream-100);
+    --text: var(--cream-100);
+    --text-muted: var(--asphalt-300);
+    --text-inverse: var(--asphalt-900);
+    --brand: var(--saffron-500);
+    --brand-hover: #ffc94d;
+    --on-brand: var(--asphalt-900);
+    --accent: var(--saffron-500);
+    --border: #3a4144;
+    --focus-ring: 0 0 0 3px var(--asphalt-900), 0 0 0 6px var(--saffron-500);
+    --shadow-sm: none; --shadow-md: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur: 0ms; }
+}
